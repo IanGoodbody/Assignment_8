@@ -11,3 +11,9 @@ circumvented this problem by having the interrupt routine change the memory
 control register to 00 which effectively stops the timer. The while loop then
 checks those two MC bits constantly and when they go to zero makes a call to 
 the move funciton, redraws, then resets the MC back to MC_1.
+
+It may be possible to to poll the counter overflow flag which could effectively
+act as an interrupt (there is nothing else for the program to do) but when I did
+it it made my ghost pattern fly across the screen far too quickly.
+
+Good Luck Team.
